@@ -53,6 +53,8 @@ export interface Dictionary {
       namePlaceholder: string;
       email: string;
       emailPlaceholder: string;
+      phone: string;
+      phonePlaceholder: string;
       message: string;
       messagePlaceholder: string;
       submit: string;

@@ -93,9 +93,20 @@ export function Footer({ locale, dict }: FooterProps) {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-6 border-t border-border">
+        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           <p className="text-xs text-muted/60 tracking-wide">
             {replaceYear(dict.footer.copyright)}
+          </p>
+          <p className="text-xs text-muted/40 tracking-wide">
+            Created by{" "}
+            <a
+              href="https://github.com/idan-aizenberg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors duration-200"
+            >
+              Aizenberg Studio
+            </a>
           </p>
         </div>
       </div>

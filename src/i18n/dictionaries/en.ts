@@ -69,6 +69,8 @@ const en: Dictionary = {
       namePlaceholder: "Your name",
       email: "Email",
       emailPlaceholder: "your@email.com",
+      phone: "Phone",
+      phonePlaceholder: "050-000-0000",
       message: "Message",
       messagePlaceholder: "Tell me about your project\u2026",
       submit: "Send Message",

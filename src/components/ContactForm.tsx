@@ -19,6 +19,7 @@ interface FormErrors {
 export function ContactForm({ dict }: ContactFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -53,7 +54,7 @@ export function ContactForm({ dict }: ContactFormProps) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, phone, message }),
       });
 
       if (!res.ok) throw new Error("Request failed");
@@ -69,6 +70,7 @@ export function ContactForm({ dict }: ContactFormProps) {
   function handleReset() {
     setName("");
     setEmail("");
+    setPhone("");
     setMessage("");
     setErrors({});
     setServerError("");
@@ -178,6 +180,25 @@ export function ContactForm({ dict }: ContactFormProps) {
             {errors.email && (
               <p className="text-red-500 text-xs mt-1">{errors.email}</p>
             )}
+          </div>
+
+          {/* Phone */}
+          <div>
+            <label
+              htmlFor="contact-phone"
+              className="block text-sm text-muted mb-2"
+            >
+              {t.phone}
+            </label>
+            <input
+              id="contact-phone"
+              type="text"
+              inputMode="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder={t.phonePlaceholder}
+              className={inputClasses}
+            />
           </div>
 
           {/* Message */}

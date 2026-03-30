@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, phone, message } = body;
 
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
       return NextResponse.json(
@@ -42,6 +42,7 @@ export async function POST(request: Request) {
           <h2 style="color: #333;">New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${name.trim()}</p>
           <p><strong>Email:</strong> ${email.trim()}</p>
+          <p><strong>Phone:</strong> ${phone?.trim() || "Not provided"}</p>
           <hr style="border: none; border-top: 1px solid #eee; margin: 16px 0;" />
           <p><strong>Message:</strong></p>
           <p style="white-space: pre-wrap;">${message.trim()}</p>

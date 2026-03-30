@@ -69,6 +69,8 @@ const he: Dictionary = {
       namePlaceholder: "השם שלכם",
       email: "אימייל",
       emailPlaceholder: "your@email.com",
+      phone: "טלפון",
+      phonePlaceholder: "050-000-0000",
       message: "הודעה",
       messagePlaceholder: "ספרו לי על הפרויקט שלכם\u2026",
       submit: "שליחת הודעה",
