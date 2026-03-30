@@ -4,7 +4,7 @@ const en: Dictionary = {
   meta: {
     title: "Shiraz Chen Azulay \u2014 Interior Design",
     description:
-      "Calm, timeless interiors shaped by light and material. Interior design studio specializing in residential renovations and full-scope planning.",
+      "Interior design studio specializing in residential renovations and full-scope planning.",
   },
   nav: {
     home: "Home",
